@@ -1,0 +1,99 @@
+/* Basic styling for the form container */
+div {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the form headings */
+h1 {
+  text-align: center;
+  color: #1d2125; /* Text color */
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Styling for form labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #1d2125; /* Text color */
+}
+
+/* Styling for form inputs and selects */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #2e8ae0; 
+}
+
+/* Styling for the dropdown content */
+.dropdown-content {
+  position: absolute;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Styling for dropdown items */
+.dropdown-content li {
+  padding: 10px;
+  cursor: pointer;
+  list-style: none;
+  color: #1d2125;
+}
+
+/* Highlighting on hover for dropdown items */
+.dropdown-content li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show the dropdown content when needed */
+input[type="text"]:focus + .dropdown-content,
+input[type="text"]:focus + .dropdown-content.show {
+  display: block;
+}
+
+/* Styling for the submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #2e8ae0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling for the submit button on hover */
+button[type="submit"]:hover {
+  background-color: #1d5c9b;
+}
+
+/* Styling for the submit button on focus */
+button[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 138, 224, 0.5);
+}

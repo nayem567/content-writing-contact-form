@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Writing Pricing Form</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="content-writing-pricing-form">
+    <form id="pricing-form">
+      <label for="service">Select Service</label>
+      <select id="service" aria-label="Select Service">
+        <!-- Options will be added by JavaScript -->
+      </select>
+
+      <label for="university">Select University</label>
+      <input
+        type="text"
+        id="university"
+        placeholder="Type to search..."
+        aria-expanded="false"
+        aria-controls="university-dropdown"
+        aria-autocomplete="list"
+      />
+      <ul id="university-dropdown" class="dropdown-content" role="listbox" style="display: none;">
+        <!-- Options will be added by JavaScript -->
+      </ul>
+
+      <label for="all-subject">Select Subject</label>
+      <select id="all-subject" aria-label="Select Subject">
+        <!-- Options will be added by JavaScript -->
+      </select>
+
+      <label for="wordcount">Select Wordcount</label>
+      <select id="wordcount" aria-label="Select Wordcount">
+        <!-- Options will be added by JavaScript -->
+      </select>
+
+      <label for="urgency">Select Urgency</label>
+      <select id="urgency" aria-label="Select Urgency">
+        <!-- Options will be added by JavaScript -->
+      </select>
+
+      <div id="price-display">
+        <!-- Placeholder for the price -->
+        Total Price: <span id="price-amount">$0.00</span>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
