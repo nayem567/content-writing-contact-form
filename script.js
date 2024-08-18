@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "22 Pages - 5500 Words", "23 Pages - 5750 Words", "24 Pages - 6000 Words"
     ];
 
-    const urgencies = ["4 days", "10 days"];
+    const urgencies = ["4 days", "8 days", "More than 8 days"];
 
     const populateSelect = (id, options) => {
         const select = document.getElementById(id);
@@ -175,6 +175,36 @@ document.addEventListener('DOMContentLoaded', () => {
     populateSelect('all-subject', allSubjects);
     populateSelect('wordcount', wordCounts);
     populateSelect('urgency', urgencies);
+
+    const wordCountInput = document.getElementById('wordcount');
+    const totalWordsDisplay = document.getElementById('total-words');
+    const decreaseButton = document.getElementById('decrease');
+    const increaseButton = document.getElementById('increase');
+
+    const updateTotalWords = () => {
+        const pages = parseInt(wordCountInput.value, 10);
+        const totalWords = pages * 250;
+        totalWordsDisplay.textContent = totalWords;
+    };
+
+    decreaseButton.addEventListener('click', () => {
+        if (wordCountInput.value > 1) {
+            wordCountInput.value = parseInt(wordCountInput.value, 10) - 1;
+            updateTotalWords();
+        }
+    });
+
+    increaseButton.addEventListener('click', () => {
+        if (wordCountInput.value < 24) {
+            wordCountInput.value = parseInt(wordCountInput.value, 10) + 1;
+            updateTotalWords();
+        }
+    });
+
+    wordCountInput.addEventListener('input', updateTotalWords);
+
+    // Initial calculation
+    updateTotalWords();
 
     const universityInput = document.getElementById('university');
     const universityDropdown = document.getElementById('university-dropdown');

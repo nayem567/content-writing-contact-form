@@ -32,10 +32,21 @@
         <!-- Options will be added by JavaScript -->
       </select>
 
-      <label for="wordcount">Select Wordcount</label>
-      <select id="wordcount" aria-label="Select Wordcount">
-        <!-- Options will be added by JavaScript -->
-      </select>
+      <label for="wordcount">Select Wordcount (Pages)</label>
+      <div class="wordcount-container">
+        <button type="button" id="decrease">-</button>
+        <input
+          type="number"
+          id="wordcount"
+          value="1"
+          min="1"
+          max="100"
+          aria-label="Select Wordcount"
+        />
+        <button type="button" id="increase">+</button>
+      </div>
+      <p>Total Words: <span id="total-words">250</span></p>
+      
 
       <label for="urgency">Select Urgency</label>
       <select id="urgency" aria-label="Select Urgency">
